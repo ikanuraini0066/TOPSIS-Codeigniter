@@ -43,9 +43,9 @@
                                                     <a href="<?php echo base_url('data_mahasiswa/delete_mahasiswa/').$mhs->id_mahasiswa ?>" class="btn btn-danger btn-icon-split">
                                                         <span class="icon text-white-50"><i class="fas fa-trash"></i></span>
                                                     </a>
-                                                    <a href="<?php echo base_url('data_mahasiswa/tambah_nilai/').$mhs->id_mahasiswa ?>" class="btn btn-primary btn-icon-split">
+                                                    <!-- <a href="<?php echo base_url('data_mahasiswa/tambah_nilai/').$mhs->id_mahasiswa ?>" class="btn btn-primary btn-icon-split">
                                                         <span class="icon text-white-50"><i class="fas fa-edit"></i></span>
-                                                    </a>
+                                                    </a> -->
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>

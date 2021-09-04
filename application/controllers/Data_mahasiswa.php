@@ -28,14 +28,14 @@ class Data_mahasiswa extends CI_Controller {
         if($this->form_validation->run()== FALSE){
             $this->tambah_mahasiswa();
         }else{
-            $kode_mahasiswa    = $this->input->post('kode_mahasiswa');
+            $id_mahasiswa      = $this->input->post('id_mahasiswa');
             $nama_mahasiswa    = $this->input->post('nama_mahasiswa');
             $nik               = $this->input->post('nik');
             $alamat            = $this->input->post('alamat');
            
         $data = array(
             
-            'kode_mahasiswa'     =>$kode_mahasiswa,
+            'id_mahasiswa'       =>$id_mahasiswa,
             'nama_mahasiswa'     =>$nama_mahasiswa,
             'nik'                =>$nik,
             'alamat'             =>$alamat,
@@ -74,14 +74,14 @@ class Data_mahasiswa extends CI_Controller {
             $this->update_mahasiswa();
         }else{
                 $id                 = $this->input->post('id_mahasiswa');
-                $kode_mahasiswa     = $this->input->post('kode_mahasiswa');
+                // $kode_mahasiswa     = $this->input->post('kode_mahasiswa');
                 $nama_mahasiswa    = $this->input->post('nama_mahasiswa');
                 $nik               = $this->input->post('nik');
                 $alamat            = $this->input->post('alamat');
     
             $data = array(
                 
-                'kode_mahasiswa'     =>$kode_mahasiswa,
+                // 'kode_mahasiswa'     =>$kode_mahasiswa,
                 'nama_mahasiswa'     =>$nama_mahasiswa,
                 'nik'                =>$nik,
                 'alamat'             =>$alamat,
@@ -103,7 +103,7 @@ class Data_mahasiswa extends CI_Controller {
     }
     public function _rules()
     {
-        $this->form_validation->set_rules('kode_mahasiswa','kode_mahasiswa','required');
+        $this->form_validation->set_rules('id_mahasiswa','id_mahasiswa','required');
         $this->form_validation->set_rules('nama_mahasiswa','nama_mahasiswa','required');
         $this->form_validation->set_rules('nik','nik','required');
         $this->form_validation->set_rules('alamat','alamat','required');

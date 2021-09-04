@@ -48,50 +48,72 @@ class beasiswa_model extends CI_model {
   }
 
   
-    //Ditambahin sendiri
-    //buat menampilkan data nilai sesuai dengan id kriteria
+//   public function pembagi(){
+//     $query ="SELECT b.`id_kriteria`, SQRT(jumlah) AS pembagi
+//     FROM(
+    
+//       SELECT a.`id_mahasiswa`, a.`id_kriteria`, SUM(kuadrat) AS jumlah
+    
+//         FROM(
+    
+//         SELECT id_mahasiswa, id_kriteria, id_nilai, nilai, (POW(nilai,2)) AS kuadrat FROM nilai a
+//         )a
+//       GROUP BY id_kriteria
+//       )b";
+
+      
+//   $result = $this->db->query($query);
+//   return $result->result();
+// }
 
 
-    public function get_Nilai($id_kriteria)
-    {
-        $query = "SELECT id_nilai, id_kriteria, id_mahasiswa, nilai FROM nilai WHERE id_kriteria = ?";
-        return $this->db->query($query, array($id_kriteria))->result_array();
+public function Pembagi(){
+    $data ="SELECT b.`id_kriteria`, SQRT(jumlah) AS pembagi
+       FROM(
+        
+          SELECT a.`id_mahasiswa`, a.`id_kriteria`, SUM(kuadrat) AS jumlah
+        
+            FROM(
+        
+             SELECT id_mahasiswa, id_kriteria, id_nilai, nilai, (POW(nilai,2)) AS kuadrat FROM nilai a
+             )a
+           GROUP BY id_kriteria
+           )b";
+
+
+        $query = $this->db->query($data);
+        if ($query->num_rows() > 0) {
+        $result = $query->result_array();
+        $query->free_result();
+        return $result;
+        }else{
+        return array();
     }
-
-    public function get_Nilai2($id_kriteria, $id_mahasiswa)
-    {
-        $query = "SELECT id_nilai, id_kriteria, id_mahasiswa, nila FROM nilai WHERE id_kriteria = ? AND id_mahasiswa = ?";
-        return $this->db->query($query, array($id_kriteria, $id_mahasiswa))->row_array();
-    }
-
-    // public function ambil_id_nilai()
-    // {
-    //   $hasil = $this->db->where('id_nilai',$id)->get('nilai');
-    //   if($hasil->num_rows() > 0){
-    //     return $hasil->result();
-    //   }else{
-    //     return false;
-    //   }
-    // }
+	}
   
-    // public function get_nilai(){
-    //   $query = $this->db->get('nilai')->result();
-    // }
-    
-    // public  function get_kuadrat()
-    // {
-    //  // $query="SELECT id_kriteria, (pow(nilai,2)) AS nilai FROM nilai where id_kriteria ='.$id.' GROUP BY id_kriteria";
-    //   // $stmt = $this->db->prepare("SELECT nilai FROM nilai_topsis WHERE id_kriteria='$id'");
-    //   $query="SELECT id_nilai, (pow(nilai,2)) AS nilai FROM nilai";
-    //   $result = $this->db->query($query);
-    //   return $result->row()->nilai;
-    // }
-    
-  // public function get_kuadrat(){
-  //   $sql="SELECT id_nilai, id_kriteria, id_mahasiswa, nilai, (pow(nilai,2)) AS hasil_kuadrat FROM nilai  ORDER BY id_nilai";
-  //   return $this->db->query($sql);
-  // }
+public function Matrik_ternormalisasi() {
 
+  $ternormalisasi="SELECT id_mahasiswa, id_kriteria, (nilai/pembagi) AS ternormalisasi
+  FROM(
+  SELECT a.id_mahasiswa, a.id_kriteria, a.nilai, b.`pembagi` FROM nilai a
+  INNER JOIN tmp_pembagi b ON a.`id_kriteria`= b.`id_kriteria`  
+  )c";
+
+
+       // return $this->db->query($ternormalisasi)->result();
+        $query = $this->db->query($ternormalisasi);
+              
+        echo "<pre>"; echo $this->db->last_query();
+        die;
+        
+        if ($query->num_rows() > 0) {
+        $result = $query->result_array();
+        $query->free_result();
+        return $result;
+        }else{
+        return array();
+    }
+  }
 }
 ?>
 

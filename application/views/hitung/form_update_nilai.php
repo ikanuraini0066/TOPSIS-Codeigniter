@@ -20,13 +20,13 @@
                          <div class="form-group">
                                 <input type="hidden" name="id_nilai" value="<?php echo $n->id_nilai ?>">
                                 <input type="text" name="nama_mahasiswa" class="form-control form-control-user" 
-                                    placeholder="nama_mahasiswa" value="<?php echo $n->nama_mahasiswa?>"readonly>
+                                    placeholder="nama_mahasiswa" value="<?php echo $n->id_mahasiswa?>"readonly>
                                     <?php echo form_error('nama_mahasiswa','<div class="text-small text-danger">','</div>') ?>
                             </div>
 
                             <div class="form-group">
                                 <input type="rext" name="nama_kriteria" class="form-control form-control-user"
-                                    placeholder="nama_kriteria" value="<?php echo $n->nama_kriteria ?>"readonly>
+                                    placeholder="nama_kriteria" value="<?php echo $n->id_kriteria ?>"readonly>
                                     <?php echo form_error('nama_kriteria','<div class="text-small text-danger">','</div>') ?>
                             </div>
                             

@@ -7,13 +7,10 @@ class Data_nilai extends CI_Controller {
         $data['nilai']= $this->beasiswa_model->get_data('nilai')->result();
         $data['mahasiswa']= $this->beasiswa_model->get_data('mahasiswa')->result();
         $data['kriteria']= $this->beasiswa_model->get_data('kriteria')->result();
-        //ditambahin ika sendiri
-        // $where = array('id_nilai' => $id);
-        // $data['kuadrat']= $this->beasiswa_model->get_kuadrat();
-        // print_r($data['kuadrat']);
+
         
-        // $data['sum']= $this->beasiswa_model->getnilaiBykriteria();
-     
+
+       
 
         $this->load->view('templates/header');
         $this->load->view('templates/sidebar');
@@ -88,7 +85,7 @@ class Data_nilai extends CI_Controller {
                 $id_mahasiswa       = $this->input->post('id_mahasiswa');
                 // $nama_mahasiswa     = $this->input->post('nama_mahasiswa');
                 $id_kriteria        = $this->input->post('id_kriteria');
-                $nama_kriteria      = $this->input->post('nama_kriteria');
+                // $nama_kriteria      = $this->input->post('nama_kriteria');
                 $nilai              = $this->input->post('nilai');       
           
           $data = array(
@@ -136,6 +133,25 @@ class Data_nilai extends CI_Controller {
         </div>');
         redirect('data_nilai');
     }
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     //ditambahin 
@@ -161,6 +177,10 @@ class Data_nilai extends CI_Controller {
 //             $pembagi= number_format(sqrt($pembagi),6);
 //         }
 //     }
+public function pembagi()
+{
+    
+}
 
 
 }

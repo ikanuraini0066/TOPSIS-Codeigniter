@@ -17,9 +17,9 @@ class Data_admin extends CI_Controller {
         {
     $data['admin']= $this->beasiswa_model->get_data('admin')->result();
     $this->load->view('templates/header');
-    $this->load->view('templates/sidebar');
+    // $this->load->view('templates/sidebar');
     $this->load->view('admin/form_tambah_admin',$data);
-    $this->load->view('templates/footer');
+    // $this->load->view('templates/footer');
     }
 
     public function tambah_admin_aksi()

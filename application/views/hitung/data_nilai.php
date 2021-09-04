@@ -52,6 +52,9 @@
                                                     <a href="<?php echo base_url('data_nilai/delete_nilai/').$n->id_nilai ?>" class="btn btn-danger btn-icon-split">
                                                         <span class="icon text-white-50"><i class="fas fa-trash"></i></span>
                                                     </a>
+                                                    <!-- <a href="<?php echo base_url('data_nilai/hitung/').$n->id_nilai ?>" class="btn btn-primary btn-icon-split">
+                                                        <span class="icon text-white-50"><i class="fas fa-edit"></i></span>
+                                                    </a> -->
                                                 </td>
                                             </tr>
                                         <?php endforeach; ?>

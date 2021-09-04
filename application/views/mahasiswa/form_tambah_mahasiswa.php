@@ -16,8 +16,14 @@
                             <h1 class="h4 text-gray-900 mb-4">Tambah Mahasiswa</h1>
                         </div>
                         <form method="POST" action="<?php echo base_url('data_mahasiswa/tambah_mahasiswa_aksi') ?>">
+
+                            <div class="form-group">
+                                <input type="text" name="id_mahasiswa" class="form-control form-control-user"
+                                    placeholder="Id Mahasiswa">
+                                    <?php echo form_error('id_mahasiswa','<div class="text-small text-danger">','</div>') ?>
+                            </div>
+
                          <div class="form-group">
-                                <input type="hidden" name="id_mahasiswa" value="<?php echo $kr->id_mahasiswa?>">
                                 <input type="text" name="nama_mahasiswa" class="form-control form-control-user" 
                                     placeholder="Nama Mahasiswa">
                                     <?php echo form_error('nama_mahasiswa','<div class="text-small text-danger">','</div>') ?>
