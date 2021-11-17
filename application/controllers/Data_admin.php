@@ -69,7 +69,7 @@ class Data_admin extends CI_Controller {
 
         if($this->form_validation->run() == FALSE)
         {
-            $this->update_admin();
+            $this->update_admin;
         }else{
                 $id           = $this->input->post('id_admin');
                 $username     = $this->input->post('username');

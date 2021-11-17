@@ -9,8 +9,8 @@
             
             <div class="row">
                
-                <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-                <div class="col-lg-7">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
                     <div class="p-5">
                         <div class="text-center">
                             <h1 class="h4 text-gray-900 mb-4">Tambah Nilai</h1>
@@ -24,17 +24,6 @@
                             <?php endforeach?>     
                             </div>
 
-                            <!-- <div class="form-group">
-                                <select name="kriteria" class="form-control form-control-user">--kriteria--
-                                    <option value="">--Kriteria--</option>
-                                    <?php foreach($kriteria as $kr): ?>
-                                        <option value="<?php echo $kr->nama_kriteria?>">
-                                        <?php echo $kr->nama_kriteria?>
-                                    </option>
-                                    <?php endforeach; ?>
-                                </select>
-                                <?php echo form_error('nama_kriteria','<div class="text-small text-danger">','</div>') ?>      
-                            </div> -->
                             <div class="form-group">
                                 <input type="number" name="nilai" class="form-control form-control-user"
                                     placeholder="Nilai">
@@ -46,7 +35,7 @@
                     </div>
                 </div>
             </div>
-           
+            <div class="col-lg-3"></div>           
             </form>
         </div>
     </div>

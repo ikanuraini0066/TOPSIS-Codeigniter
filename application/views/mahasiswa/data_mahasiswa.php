@@ -20,7 +20,7 @@
                                             <th>No</th>
                                             <th>Id Mahasiswa</th>
                                             <th>Nama Mahasiswa</th>
-                                            <th>NIK</th>
+                                            <!-- <th>NIK</th> -->
                                             <th>alamat</th>
                                             <th>Aksi</th>
                                         </tr>
@@ -33,7 +33,7 @@
                                                 <td><?php echo $no++ ?></td>
                                                 <td><?php echo $mhs->id_mahasiswa ?></td>
                                                 <td><?php echo $mhs->nama_mahasiswa ?></td>
-                                                <td><?php echo $mhs->nik?></td>
+                                                <!-- <td><?php echo $mhs->nik?></td> -->
                                                 <td><?php echo $mhs->alamat ?></td>
                                             
                                                 <td>

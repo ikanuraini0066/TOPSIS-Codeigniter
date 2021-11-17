@@ -29,14 +29,14 @@ class Data_kriteria extends CI_Controller {
         if($this->form_validation->run()== FALSE){
             $this->tambah_kriteria();
         }else{
-            // $id_kriteria    = $this->input->post('id_kriteria');
+            $id_kriteria    = $this->input->post('id_kriteria');
             $nama_kriteria    = $this->input->post('nama_kriteria');
             $bobot_kriteria    = $this->input->post('bobot_kriteria');
             $keterangan    = $this->input->post('keterangan');
         
 
         $data = array(
-            // 'id_kriteria'       =>$id_kriteria,
+            'id_kriteria'       =>$id_kriteria,
             'nama_kriteria'     =>$nama_kriteria,
             'bobot_kriteria'    =>$bobot_kriteria,
             'keterangan'        =>$keterangan
@@ -79,7 +79,7 @@ class Data_kriteria extends CI_Controller {
                 $keterangan         = $this->input->post('keterangan');
           
           $data = array(
-              // 'id_kriteria'       =>$id_kriteria,
+               //'id_kriteria'       =>$id_kriteria,
               'nama_kriteria'     =>$nama_kriteria,
               'bobot_kriteria'    =>$bobot_kriteria,
               'keterangan'        =>$keterangan,

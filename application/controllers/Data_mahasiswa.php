@@ -30,14 +30,14 @@ class Data_mahasiswa extends CI_Controller {
         }else{
             $id_mahasiswa      = $this->input->post('id_mahasiswa');
             $nama_mahasiswa    = $this->input->post('nama_mahasiswa');
-            $nik               = $this->input->post('nik');
+            // $nik               = $this->input->post('nik');
             $alamat            = $this->input->post('alamat');
            
         $data = array(
             
             'id_mahasiswa'       =>$id_mahasiswa,
             'nama_mahasiswa'     =>$nama_mahasiswa,
-            'nik'                =>$nik,
+            // 'nik'                =>$nik,
             'alamat'             =>$alamat,
             
         );
@@ -56,7 +56,7 @@ class Data_mahasiswa extends CI_Controller {
 
     public function update_mahasiswa($id)
     {
-        $where = array('id_mahasiswa' => $id);
+        //$where = array('id_mahasiswa' => $id);
         $data['mahasiswa'] = $this->db->query("SELECT * FROM mahasiswa WHERE id_mahasiswa = '$id'")->result();
 
         $this->load->view('templates/header');
@@ -71,19 +71,19 @@ class Data_mahasiswa extends CI_Controller {
 
         if($this->form_validation->run() == FALSE)
         {
-            $this->update_mahasiswa();
+            $this->update_mahasiswa;
         }else{
                 $id                 = $this->input->post('id_mahasiswa');
                 // $kode_mahasiswa     = $this->input->post('kode_mahasiswa');
                 $nama_mahasiswa    = $this->input->post('nama_mahasiswa');
-                $nik               = $this->input->post('nik');
+                // $nik               = $this->input->post('nik');
                 $alamat            = $this->input->post('alamat');
     
             $data = array(
                 
                 // 'kode_mahasiswa'     =>$kode_mahasiswa,
                 'nama_mahasiswa'     =>$nama_mahasiswa,
-                'nik'                =>$nik,
+                // 'nik'                =>$nik,
                 'alamat'             =>$alamat,
                 
           );
@@ -105,7 +105,7 @@ class Data_mahasiswa extends CI_Controller {
     {
         $this->form_validation->set_rules('id_mahasiswa','id_mahasiswa','required');
         $this->form_validation->set_rules('nama_mahasiswa','nama_mahasiswa','required');
-        $this->form_validation->set_rules('nik','nik','required');
+        // $this->form_validation->set_rules('nik','nik','required');
         $this->form_validation->set_rules('alamat','alamat','required');
        
     }

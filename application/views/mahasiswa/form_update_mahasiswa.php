@@ -9,8 +9,8 @@
             
             <div class="row">
                
-                <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-                <div class="col-lg-7">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
                     <div class="p-5">
                         <div class="text-center">
                             <h1 class="h4 text-gray-900 mb-4">Form Update Data Mahasiswa</h1>
@@ -24,11 +24,11 @@
                                     <?php echo form_error('nama_mahasiswa','<div class="text-small text-danger">','</div>') ?>
                             </div>
 
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <input type="number" name="nik" class="form-control form-control-user"
                                     placeholder="NIK" value="<?php echo $mhs->nik ?>">
                                     <?php echo form_error('nik','<div class="text-small text-danger">','</div>') ?>
-                            </div>
+                            </div> -->
 
                             <div class="form-group">
                                 <input type="text" name="alamat" class="form-control form-control-user"
@@ -57,6 +57,7 @@
                     </div>
                 </div>
             </div>         
+            <div class="col-md-3">
             
         </div>
     </div>

@@ -20,7 +20,7 @@
                                             <th>No</th>
                                             <th>Id Admin</th>
                                             <th>Username</th>
-                                            <th>Password</th>
+                                            <!-- <th>Password</th> -->
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -32,7 +32,7 @@
                                                 <td><?php echo $no++ ?></td>
                                                 <td><?php echo $ad->id_admin ?></td>
                                                 <td><?php echo $ad->username ?></td>
-                                                <td><?php echo $ad->password?></td>
+                                                <!-- <td><?php echo $ad->password?></td> -->
                                                 <td>
                                                     <a href="<?php echo base_url('data_admin/update_admin/').$ad->id_admin ?>" class="btn btn-primary btn-icon-split">
                                                         <span class="icon text-white-50"><i class="fas fa-edit"></i></span>

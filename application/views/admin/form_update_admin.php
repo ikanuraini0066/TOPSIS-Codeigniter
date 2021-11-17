@@ -9,8 +9,8 @@
             
             <div class="row">
                
-                <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-                <div class="col-lg-7">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
                     <div class="p-5">
                         <div class="text-center">
                             <h1 class="h4 text-gray-900 mb-4">Form Update Data admin</h1>
@@ -37,6 +37,7 @@
                     </div>
                 </div>
             </div>         
+            <div class="col-lg-3"></div>
             
         </div>
     </div>
